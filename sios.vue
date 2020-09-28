@@ -28,9 +28,7 @@
                             <img :src="'img/sio/check.svg'" alt="✔" v-if="check_id === v[config.id]" />
                         </div>
                     </div>
-                    <div class="empty-list" v-if="list.length == 0">
-                        Пусто. 🤨
-                    </div>
+                    <div class="empty-list" v-if="list.length == 0">Пусто. 🤨</div>
                 </div>
                 <!-- sio footer -->
                 <div class="sio-footer"></div>
@@ -88,6 +86,92 @@ module.exports = {
 </script>
 
 <style>
+.select-ios {
+    width: 100%;
+    min-height: 320px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 999;
+    border-radius: 12px;
+    margin-top: 7px;
+    top: calc(100vh - 0px);
+    transition-property: top;
+    transition-duration: 0.5s;
+}
+
+.sio-open {
+    top: calc(100vh - 310px);
+    transition-property: top;
+    transition-duration: 0.5s;
+}
+
+.sio-container {
+    margin: auto;
+    max-width: 500px;
+}
+
+.sio-position-title {
+    margin-top: 12px;
+}
+
+.select-ios-name {
+    padding: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.select-ios-exit {
+    padding-left: 0px;
+    text-align: center;
+}
+
+.select-ios-exit>img,
+svg {
+    width: 12px;
+}
+
+.sio-body {
+    width: 100%;
+    padding: 5px 8px 15px 10px;
+    max-height: 258px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sio-body>.point {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f5f4f4;
+}
+
+.sio-text-check>span {
+    padding-left: 5px;
+}
+
+.sio-check {
+    text-align: center;
+}
+
+.sio-check>img,
+svg {
+    width: 15px;
+}
+
+.sio-footer {
+    width: 100%;
+}
+
+.sio-back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 20, 21, 0.5);
+    z-index: 888;
+}
+
 .sio-v1 {
     width: 100%;
     padding: 0px;
