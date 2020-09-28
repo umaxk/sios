@@ -1,3 +1,3 @@
-var sios = require('vue!./sios.vue')
+var sios = require('vue!./src/sios.vue')
 
 Vue.component('sios', sios)

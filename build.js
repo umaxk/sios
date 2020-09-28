@@ -44,15 +44,81 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var sios = __webpack_require__(10)
+	var sios = __webpack_require__(1)
 
 	Vue.component('sios', sios)
 
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */,
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	__webpack_require__(2)
+	__vue_script__ = __webpack_require__(6)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src\\sios.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(7)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	if (__vue_template__) {
+	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
+	}
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "./sios.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(3);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(5)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./sios.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./sios.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 3 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(4)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.select-ios {\r\n    width: 100%;\r\n    min-height: 320px;\r\n    background-color: #fff;\r\n    position: fixed;\r\n    z-index: 999;\r\n    border-radius: 12px;\r\n    margin-top: 7px;\r\n    top: calc(100vh - 0px);\r\n    transition-property: top;\r\n    transition-duration: 0.5s;\r\n}\r\n\r\n.sio-open {\r\n    top: calc(100vh - 310px);\r\n    transition-property: top;\r\n    transition-duration: 0.5s;\r\n}\r\n\r\n.sio-container {\r\n    margin: auto;\r\n    max-width: 500px;\r\n}\r\n\r\n.sio-position-title {\r\n    margin-top: 12px;\r\n}\r\n\r\n.select-ios-name {\r\n    padding: 5px;\r\n    padding-left: 15px;\r\n    font-size: 18px;\r\n    font-weight: bold;\r\n}\r\n\r\n.select-ios-exit {\r\n    padding-left: 0px;\r\n    text-align: center;\r\n}\r\n\r\n.select-ios-exit>img,\r\nsvg {\r\n    width: 12px;\r\n}\r\n\r\n.sio-body {\r\n    width: 100%;\r\n    padding: 5px 8px 15px 10px;\r\n    max-height: 258px;\r\n    overflow-y: auto;\r\n    overflow-x: hidden;\r\n}\r\n\r\n.sio-body>.point {\r\n    padding-top: 10px;\r\n    padding-bottom: 10px;\r\n    border-bottom: 1px solid #f5f4f4;\r\n}\r\n\r\n.sio-text-check>span {\r\n    padding-left: 5px;\r\n}\r\n\r\n.sio-check {\r\n    text-align: center;\r\n}\r\n\r\n.sio-check>img,\r\nsvg {\r\n    width: 15px;\r\n}\r\n\r\n.sio-footer {\r\n    width: 100%;\r\n}\r\n\r\n.sio-back {\r\n    position: fixed;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background-color: rgba(20, 20, 21, 0.5);\r\n    z-index: 888;\r\n}\r\n\r\n.sio-v1 {\r\n    width: 100%;\r\n    padding: 0px;\r\n    margin-left: -14px;\r\n    max-width: 500px;\r\n}\r\n\r\n.sio-input {\r\n    width: 100%;\r\n    height: 40px;\r\n    background: #fff;\r\n    border: 1px solid #e3e3e6;\r\n    padding: 40px 10px 10px 10px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.sio-block {\r\n    margin-top: -26px;\r\n    max-width: 100%;\r\n    -ms-text-overflow: ellipsis;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    -ms-line-clamp: 1;\r\n    -webkit-line-clamp: 1;\r\n    line-clamp: 1;\r\n    display: -webkit-box;\r\n    display: box;\r\n    word-wrap: break-word;\r\n    box-orient: vertical;\r\n    font-size: 15px;\r\n    line-height: 19px;\r\n}\r\n\r\n.point {\r\n    cursor: pointer;\r\n}\r\n\r\n.empty-list {\r\n    text-align: center;\r\n    margin-top: 65px;\r\n}\r\n", ""]);
+
+	// exports
+
+
+/***/ },
 /* 4 */
 /***/ function(module, exports) {
 
@@ -331,80 +397,7 @@
 
 
 /***/ },
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	__webpack_require__(11)
-	__vue_script__ = __webpack_require__(13)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] sios.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(14)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	if (__vue_template__) {
-	(typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports).template = __vue_template__
-	}
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "./sios.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(12);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(5)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-rewriter.js!./node_modules/vue-loader/lib/selector.js?type=style&index=0!./sios.vue", function() {
-				var newContent = require("!!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-rewriter.js!./node_modules/vue-loader/lib/selector.js?type=style&index=0!./sios.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(4)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\r\n.sio-v1 {\r\n    width: 100%;\r\n    padding: 0px;\r\n    margin-left: -14px;\r\n    max-width: 500px;\r\n}\r\n\r\n.sio-input {\r\n    width: 100%;\r\n    height: 40px;\r\n    background: #fff;\r\n    border: 1px solid #e3e3e6;\r\n    padding: 40px 10px 10px 10px;\r\n    border-radius: 10px;\r\n}\r\n\r\n.sio-block {\r\n    margin-top: -26px;\r\n    max-width: 100%;\r\n    -ms-text-overflow: ellipsis;\r\n    text-overflow: ellipsis;\r\n    overflow: hidden;\r\n    -ms-line-clamp: 1;\r\n    -webkit-line-clamp: 1;\r\n    line-clamp: 1;\r\n    display: -webkit-box;\r\n    display: box;\r\n    word-wrap: break-word;\r\n    box-orient: vertical;\r\n    font-size: 15px;\r\n    line-height: 19px;\r\n}\r\n\r\n.point {\r\n    cursor: pointer;\r\n}\r\n\r\n.empty-list {\r\n    text-align: center;\r\n    margin-top: 65px;\r\n}\r\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 13 */
+/* 6 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -455,10 +448,10 @@
 	};
 
 /***/ },
-/* 14 */
+/* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "\r\n<div>\r\n    <label for=\"app-1\" v-html=\"label\"></label>\r\n    <div class=\"sio-input\" @click=\"open()\">\r\n        <div class=\"sio-block\">\r\n            <span v-html=\"text_label\"></span>\r\n        </div>\r\n    </div>\r\n    <div class=\"sio-v1\">\r\n        <div class=\"sio-back\" @click=\"close()\" v-if=\"show\"></div>\r\n        <div :class=\"'select-ios ' + (show ? 'sio-open' : '')\">\r\n            <div class=\"sio-container\">\r\n                <div class=\"row sio-position-title\">\r\n                    <div class=\"col-10\">\r\n                        <span class=\"select-ios-name\" v-html=\"label\"></span>\r\n                    </div>\r\n                    <div class=\"select-ios-exit col-2\" @click=\"close()\">\r\n                        <img :src=\"'img/sio/close.svg'\" alt=\"x\" />\r\n                    </div>\r\n                </div>\r\n                <!-- sio body -->\r\n                <div class=\"sio-body\">\r\n                    <div class=\"point row\" :key=\"k\" v-for=\"(v, k) in list\" @click=\"i_check(k)\">\r\n                        <div class=\"col-10 sio-text-check\">\r\n                            <span v-html=\"v.name\">-</span>\r\n                        </div>\r\n                        <div class=\"col-2 sio-check\">\r\n                            <img :src=\"'img/sio/check.svg'\" alt=\"✔\" v-if=\"check_id === v[config.id]\" />\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"empty-list\" v-if=\"list.length == 0\">\r\n                        Пусто. 🤨\r\n                    </div>\r\n                </div>\r\n                <!-- sio footer -->\r\n                <div class=\"sio-footer\"></div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+	module.exports = "\r\n<div>\r\n    <label for=\"app-1\" v-html=\"label\"></label>\r\n    <div class=\"sio-input\" @click=\"open()\">\r\n        <div class=\"sio-block\">\r\n            <span v-html=\"text_label\"></span>\r\n        </div>\r\n    </div>\r\n    <div class=\"sio-v1\">\r\n        <div class=\"sio-back\" @click=\"close()\" v-if=\"show\"></div>\r\n        <div :class=\"'select-ios ' + (show ? 'sio-open' : '')\">\r\n            <div class=\"sio-container\">\r\n                <div class=\"row sio-position-title\">\r\n                    <div class=\"col-10\">\r\n                        <span class=\"select-ios-name\" v-html=\"label\"></span>\r\n                    </div>\r\n                    <div class=\"select-ios-exit col-2\" @click=\"close()\">\r\n                        <img :src=\"'img/sio/close.svg'\" alt=\"x\" />\r\n                    </div>\r\n                </div>\r\n                <!-- sio body -->\r\n                <div class=\"sio-body\">\r\n                    <div class=\"point row\" :key=\"k\" v-for=\"(v, k) in list\" @click=\"i_check(k)\">\r\n                        <div class=\"col-10 sio-text-check\">\r\n                            <span v-html=\"v.name\">-</span>\r\n                        </div>\r\n                        <div class=\"col-2 sio-check\">\r\n                            <img :src=\"'img/sio/check.svg'\" alt=\"✔\" v-if=\"check_id === v[config.id]\" />\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"empty-list\" v-if=\"list.length == 0\">Пусто. 🤨</div>\r\n                </div>\r\n                <!-- sio footer -->\r\n                <div class=\"sio-footer\"></div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }
 /******/ ]);
