@@ -410,6 +410,7 @@
 	    },
 	    data: function data() {
 	        return {
+	            val: this.value,
 	            show: false,
 	            config: {
 	                id: "id",
@@ -420,15 +421,14 @@
 	    },
 	    computed: {
 	        text_label: function text_label() {
-	            if (this.value == "" || this.value === undefined) {
+	            if (this.val == "" || this.val === undefined) {
 	                return this.label;
 	            } else {
-	                console.log(this.value);
-	                return this.value[this.config.label];
+	                return this.val[this.config.label];
 	            }
 	        },
 	        check_id: function check_id() {
-	            return this.value !== undefined ? this.value[this.config.id] : null;
+	            return this.val !== undefined ? this.val[this.config.id] : null;
 	        }
 	    },
 	    methods: {
@@ -436,7 +436,7 @@
 	            this.show = true;
 	        },
 	        i_check: function i_check(k) {
-	            this.value = this.list[k];
+	            this.val = this.list[k];
 	            this.$emit("input", this.list[k]);
 	            this.show = false;
 	        },
@@ -450,7 +450,7 @@
 /* 7 */
 /***/ function(module, exports) {
 
-	module.exports = "\r\n<div>\r\n    <label for=\"app-1\" v-html=\"label\"></label>\r\n    <div class=\"sio-input\" @click=\"open()\">\r\n        <div class=\"sio-block\">\r\n            <span :style=\"((value == '')?'color:rgb(213, 213, 213);':'')\" v-html=\"text_label\"></span>\r\n        </div>\r\n    </div>\r\n    <div class=\"sio-v1\">\r\n        <div class=\"sio-back\" @click=\"close()\" v-if=\"show\"></div>\r\n        <div :class=\"'select-ios ' + (show ? 'sio-open' : '')\">\r\n            <div class=\"sio-container\">\r\n                <div class=\"row sio-position-title\">\r\n                    <div class=\"col-10\">\r\n                        <span class=\"select-ios-name\" v-html=\"label\"></span>\r\n                    </div>\r\n                    <div class=\"select-ios-exit col-2\" @click=\"close()\">\r\n                        <img :src=\"'img/sio/close.svg'\" alt=\"x\" />\r\n                    </div>\r\n                </div>\r\n                <!-- sio body -->\r\n                <div class=\"sio-body\">\r\n                    <div class=\"point row\" :key=\"k\" v-for=\"(v, k) in list\" @click=\"i_check(k)\">\r\n                        <div class=\"col-10 sio-text-check\">\r\n                            <span v-html=\"v.name\">-</span>\r\n                        </div>\r\n                        <div class=\"col-2 sio-check\">\r\n                            <img :src=\"'img/sio/check.svg'\" alt=\"✔\" v-if=\"check_id === v[config.id]\" />\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"empty-list\" v-if=\"list.length == 0\">Пусто. 🤨</div>\r\n                </div>\r\n                <!-- sio footer -->\r\n                <div class=\"sio-footer\"></div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
+	module.exports = "\r\n<div>\r\n    <label for=\"app-1\" v-html=\"label\"></label>\r\n    <div class=\"sio-input\" @click=\"open()\">\r\n        <div class=\"sio-block\">\r\n            <span :style=\"((val == '')?'color:rgb(213, 213, 213);':'')\" v-html=\"text_label\"></span>\r\n        </div>\r\n    </div>\r\n    <div class=\"sio-v1\">\r\n        <div class=\"sio-back\" @click=\"close()\" v-if=\"show\"></div>\r\n        <div :class=\"'select-ios ' + (show ? 'sio-open' : '')\">\r\n            <div class=\"sio-container\">\r\n                <div class=\"row sio-position-title\">\r\n                    <div class=\"col-10\">\r\n                        <span class=\"select-ios-name\" v-html=\"label\"></span>\r\n                    </div>\r\n                    <div class=\"select-ios-exit col-2\" @click=\"close()\">\r\n                        <img :src=\"'img/sio/close.svg'\" alt=\"x\" />\r\n                    </div>\r\n                </div>\r\n                <!-- sio body -->\r\n                <div class=\"sio-body\">\r\n                    <div class=\"point row\" :key=\"k\" v-for=\"(v, k) in list\" @click=\"i_check(k)\">\r\n                        <div class=\"col-10 sio-text-check\">\r\n                            <span v-html=\"v.name\">-</span>\r\n                        </div>\r\n                        <div class=\"col-2 sio-check\">\r\n                            <img :src=\"'img/sio/check.svg'\" alt=\"✔\" v-if=\"check_id === v[config.id]\" />\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"empty-list\" v-if=\"list.length == 0\">Пусто. 🤨</div>\r\n                </div>\r\n                <!-- sio footer -->\r\n                <div class=\"sio-footer\"></div>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ }
 /******/ ]);

@@ -3,7 +3,7 @@
     <label for="app-1" v-html="label"></label>
     <div class="sio-input" @click="open()">
         <div class="sio-block">
-            <span :style="((value == '')?'color:rgb(213, 213, 213);':'')" v-html="text_label"></span>
+            <span :style="((val == '')?'color:rgb(213, 213, 213);':'')" v-html="text_label"></span>
         </div>
     </div>
     <div class="sio-v1">
@@ -47,6 +47,7 @@ module.exports = {
     },
     data: function () {
         return {
+            val: this.value,
             show: false,
             config: {
                 id: "id",
@@ -57,15 +58,14 @@ module.exports = {
     },
     computed: {
         text_label: function () {
-            if (this.value == "" || this.value === undefined) {
+            if (this.val == "" || this.val === undefined) {
                 return this.label;
             } else {
-                console.log(this.value);
-                return this.value[this.config.label];
+                return this.val[this.config.label];
             }
         },
         check_id: function () {
-            return this.value !== undefined ? this.value[this.config.id] : null;
+            return this.val !== undefined ? this.val[this.config.id] : null;
         },
     },
     methods: {
@@ -73,7 +73,7 @@ module.exports = {
             this.show = true;
         },
         i_check: function (k) {
-            this.value = this.list[k];
+            this.val = this.list[k];
             this.$emit("input", this.list[k]);
             this.show = false;
         },
