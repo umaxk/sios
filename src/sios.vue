@@ -3,7 +3,7 @@
     <label for="app-1" v-html="label"></label>
     <div class="sio-input" @click="open()">
         <div class="sio-block">
-            <span v-html="text_label"></span>
+            <span :style="((value == '')?'color:rgb(213, 213, 213);':'')" v-html="text_label"></span>
         </div>
     </div>
     <div class="sio-v1">
@@ -43,12 +43,11 @@ module.exports = {
     props: {
         label: String,
         list: Array,
+        value: [String, Number, Object]
     },
     data: function () {
         return {
             show: false,
-            value: "",
-            puint: -1,
             config: {
                 id: "id",
                 field: [],
@@ -58,14 +57,15 @@ module.exports = {
     },
     computed: {
         text_label: function () {
-            if (this.value == "") {
+            if (this.value == "" || this.value === undefined) {
                 return this.label;
             } else {
+                console.log(this.value);
                 return this.value[this.config.label];
             }
         },
         check_id: function () {
-            return this.value[this.config.id];
+            return this.value !== undefined ? this.value[this.config.id] : null;
         },
     },
     methods: {
@@ -74,14 +74,13 @@ module.exports = {
         },
         i_check: function (k) {
             this.value = this.list[k];
-            this.check = k;
             this.$emit("input", this.list[k]);
             this.show = false;
         },
         close: function () {
             this.show = false;
-        },
-    },
+        }
+    }
 };
 </script>
 
