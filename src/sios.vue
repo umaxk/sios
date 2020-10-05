@@ -3,7 +3,7 @@
     <label for="app-1" v-html="label"></label>
     <div class="sio-input" @click="open()">
         <div class="sio-block">
-            <span :style="((val == '')?'color:rgb(213, 213, 213);':'')" v-html="text_label"></span>
+            <span :style="((val == '' || val == null)?'color:rgb(213, 213, 213);':'')" v-html="text_label"></span>
         </div>
     </div>
     <div class="sio-v1">
@@ -11,7 +11,7 @@
         <div :class="'select-ios ' + (show ? 'sio-open' : '')">
             <div class="sio-container">
                 <div class="row sio-position-title">
-                    <div class="col-10">
+                    <div class="col-10 sio-fix-position">
                         <span class="select-ios-name" v-html="label"></span>
                     </div>
                     <div class="select-ios-exit col-2" @click="close()">
@@ -58,7 +58,7 @@ module.exports = {
     },
     computed: {
         text_label: function () {
-            if (this.val == "" || this.val === undefined) {
+            if (this.val == "" || this.val === undefined || this.val == null) {
                 return this.label;
             } else {
                 return this.val[this.config.label];
@@ -113,9 +113,11 @@ module.exports = {
     margin-top: 12px;
 }
 
+.sio-fix-position {
+    padding-left:30px;
+}
+
 .select-ios-name {
-    padding: 5px;
-    padding-left: 15px;
     font-size: 18px;
     font-weight: bold;
 }
@@ -203,6 +205,7 @@ svg {
     box-orient: vertical;
     font-size: 15px;
     line-height: 19px;
+    white-space: nowrap;
 }
 
 .point {
